@@ -45,6 +45,7 @@ impl Expansion {
     }
 }
 
+/// Client to the raider.io API
 pub struct Client {
     http_client: reqwest::Client,
 }
@@ -54,6 +55,7 @@ impl Client {
             http_client: reqwest::Client::new(),
         }
     }
+    /// Builder for getting character information
     pub fn character_details<'s, 'i: 's>(
         &'s self,
         region: Region,
